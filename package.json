@@ -1,0 +1,36 @@
+{
+  "name": "transport-severa-ui-test",
+  "version": "1.0.0",
+  "description": "E2E UI tests for Transport Severa portal",
+  "scripts": {
+    "test": "playwright test",
+    "test:no-auth": "playwright test --project=chromium-no-auth --grep @no-auth",
+    "test:auth": "playwright test --grep @auth",
+    "test:tms": "cross-env TMS_SYNC=true playwright test",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write .",
+    "tms-sync": "ts-node scripts/tms-sync.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.6",
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.62.1",
+    "@types/node": "^26.2.0",
+    "@typescript-eslint/eslint-plugin": "^8.65.0",
+    "@typescript-eslint/parser": "^8.65.0",
+    "cross-env": "^10.1.0",
+    "dotenv": "^17.4.2",
+    "eslint": "^10.8.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-playwright": "^2.11.0",
+    "globals": "^17.9.0",
+    "prettier": "^3.9.6",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
